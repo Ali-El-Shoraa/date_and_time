@@ -1,0 +1,188 @@
+/* start global rules */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body,
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  background-color: #272527;
+  color: white;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules */
+.clock-section {
+  position: relative;
+}
+.clock-section::before,
+.clock-section::after {
+  position: absolute;
+  content: "";
+  width: 55%;
+  height: 100%;
+  top: 0;
+  border-radius: 18px;
+  z-index: 0;
+}
+.clock-section::before {
+  left: 0;
+  box-shadow: 0 0 50px #333a91;
+}
+.clock-section::after {
+  right: 0;
+  box-shadow: 0 0 50px #913375;
+}
+
+/* ************************************************** */
+
+.container {
+  background-color: #24272d;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ************************************************** */
+.clock-section .clock .dot {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.clock-section .clock .dot > li {
+  position: relative;
+}
+.clock-section .clock .dot li .i-dot {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.clock-section .clock .dot .list {
+  position: absolute;
+  border-radius: 5px;
+  padding: 0 10px;
+  right: 0;
+  top: 24px;
+  display: flex;
+  width: 180px;
+  background-color: #3c3a3c;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+.clock-section .clock .dot .list label {
+  padding: 8px 0;
+  display: block;
+}
+@media (max-width: 767px) {
+  .clock-section .clock .dot .list {
+    font-size: 16px;
+    width: 150px;
+  }
+}
+.ds-none {
+  display: none;
+  transition: 0.3s;
+}
+/* ************************************************** */
+
+.clock-section .clock .box-time {
+}
+.clock-section .clock .box-time {
+  font-size: 100px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  position: relative;
+  padding: 15px 65px 0;
+  display: flex;
+  align-items: center;
+}
+
+.clock-section .clock .box-time .sec {
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  bottom: 18px;
+  right: 20px;
+}
+.clock-section .clock .box-time .am-pm {
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  top: 13px;
+  right: 13px;
+}
+@media (max-width: 767px) {
+  .clock-section .clock .box-time .sec {
+    font-size: 17px;
+    bottom: 0;
+    right: 20px;
+  }
+  .clock-section .clock .box-time .am-pm {
+    font-size: 15px;
+    top: 0;
+    right: 17px;
+  }
+  .clock-section .clock .box-time {
+    padding: 15px 50px 0;
+  }
+  .clock-section .clock .box-time {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+}
+/* ************************************************** */
+.clock-section .clock .date {
+  width: fit-content;
+  margin: auto;
+  font-size: 30px;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .clock-section .clock .date {
+    font-size: 20px;
+  }
+}

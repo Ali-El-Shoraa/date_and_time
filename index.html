@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/css/normalize.css" />
+    <link rel="stylesheet" href="style/css/all.min.css" />
+    <link rel="stylesheet" href="style/css/style.css" />
+    <title>Date Time</title>
+  </head>
+  <body>
+    <main>
+      <!-- start time-section -->
+      <section class="clock-section">
+        <div class="container">
+          <!-- start clock -->
+          <div class="clock">
+            <ul class="dot">
+              <li>
+                <i class="i-dot fa-solid fa-ellipsis-vertical"></i>
+                <ul class="ds-none" id="list">
+                  <li><label for="checkbox">24-hour format</label></li>
+                  <li><input type="checkbox" id="checkbox" checked /></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- start time -->
+            <div class="box-time">
+              <span class="am-pm">am</span>
+              <div class="hour">08</div>
+              <div class="">:</div>
+              <div class="min">37</div>
+              <span class="sec">20</span>
+            </div>
+            <!-- end time -->
+            <!-- start date -->
+            <div class="date">
+              <div class="day-name">sat, 20 -6 -2023</div>
+            </div>
+            <!-- end date -->
+          </div>
+          <!-- end clock -->
+        </div>
+      </section>
+      <!-- end section -->
+      <script src="main.js" defer></script>
+    </main>
+  </body>
+</html>
